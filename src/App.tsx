@@ -1,5 +1,11 @@
+import { Welcome } from './components/Welcome'
+
 function App() {
-  return <h1 className="text-6xl">Memory Game</h1>;
+  return (
+    <main className="container">
+      <Welcome />
+    </main>
+  )
 }
 
-export default App;
+export default App
