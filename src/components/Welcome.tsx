@@ -8,7 +8,7 @@ export const Welcome = (): JSX.Element => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center p-4 min-h-screen">
+    <div className="flex flex-col justify-center items-center min-h-screen lg:w-1/2 mx-auto">
       <h1 className="text-5xl mb-2 text-gray-800">Memory Game</h1>
       <p className="text-lg text-gray-500">
         Test your concentration in a fun way
@@ -22,8 +22,8 @@ export const Welcome = (): JSX.Element => {
           id="full_name"
           className="border px-4 py-4 rounded-md text-center min-w-full mb-2 border-gray-500 text-xl"
         />
-        <button className="block bg-gray-800 text-white rounded-md p-4 min-w-full">
-          Play
+        <button className="block bg-gray-800 text-white rounded-md p-4 min-w-full text-xl">
+          Play!
         </button>
       </form>
     </div>
