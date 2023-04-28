@@ -1,5 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+
+import { Button } from '../ui/Button'
+import { Title } from '../ui/Title'
+import { Subtitle } from '../ui/Subtitle'
+import { Input } from '../ui/Input'
+
 export const Welcome = (): JSX.Element => {
   const [name, setName] = useState<string>('')
   const navigate = useNavigate()
@@ -15,12 +21,10 @@ export const Welcome = (): JSX.Element => {
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen lg:w-1/2 mx-auto">
-      <h1 className="text-5xl mb-2 text-gray-800">Memory Game</h1>
-      <p className="text-lg text-gray-500">
-        Test your concentration in a fun way
-      </p>
+      <Title>Memory Game</Title>
+      <Subtitle>Test your concentration in a fun way</Subtitle>
       <form action="#" className="mt-4 min-w-full" onSubmit={handleSubmit}>
-        <input
+        <Input
           name="full_name"
           onChange={handleOnChange}
           value={name}
@@ -28,9 +32,7 @@ export const Welcome = (): JSX.Element => {
           id="full_name"
           className="border px-4 py-4 rounded-md text-center min-w-full mb-2 border-gray-500 text-xl"
         />
-        <button className="block bg-gray-800 text-white rounded-md p-4 min-w-full text-xl">
-          Play!
-        </button>
+        <Button>Play!</Button>
       </form>
     </div>
   )
