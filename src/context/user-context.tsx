@@ -9,7 +9,7 @@ const UserStateContext = React.createContext<
   { state: State; dispatch: Dispatch } | undefined
 >(undefined)
 
-function userReducer(state: State, action: Action) {
+function userReducer(_: State, action: Action) {
   switch (action.type) {
     case 'set': {
       return { name: action.payload.name }
