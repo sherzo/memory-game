@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useFetchModyoImages } from './useFetchModyoImages'
-import { ModyoImage, TCard } from '../@types'
+import { ModyoImage, TCard } from '../@types/types'
 import { v4 as uuidv4 } from 'uuid'
 
 type Props = {

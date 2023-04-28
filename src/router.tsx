@@ -1,9 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom'
 
 import { Welcome } from './pages/Welcome'
-import { GameBoard } from './pages/GameBoard'
+// import { GameBoard } from './pages/GameBoard'
 import { Layout } from './components/Layout'
 import { GameOver } from './pages/GameOver'
+import { Game } from './pages/Game'
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/game',
-        element: <GameBoard />
+        element: <Game />
       },
       {
         path: '/game-over',

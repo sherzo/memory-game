@@ -3,8 +3,8 @@ import { Button } from '../ui/Button'
 import { Subtitle } from '../ui/Subtitle'
 import { Title } from '../ui/Title'
 import { useUser } from '../context/user-context'
-import { useGame } from '../context/game-context'
 import { Timer } from '../components/Timer'
+import { useTimer } from '../context/timer-context'
 
 export const GameOver = (): JSX.Element => {
   const {
@@ -13,23 +13,23 @@ export const GameOver = (): JSX.Element => {
   } = useUser()
   const {
     state: { time },
-    dispatch: disptachGame
-  } = useGame()
+    dispatch: dispathTimer
+  } = useTimer()
   const navigate = useNavigate()
 
   const restart = () => {
-    disptachGame({ type: 'resetTime' })
+    dispathTimer({ type: 'reset' })
     navigate('/game')
   }
   const exit = () => {
-    disptachGame({ type: 'resetTime' })
+    dispathTimer({ type: 'reset' })
     disptachUser({ type: 'set', payload: { name: '' } })
     navigate('/')
   }
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen lg:w-1/2 mx-auto">
-      <Title>Your Win 🎉!</Title>
+      <Title>You Win 🎉!</Title>
       <Subtitle>
         Congrants {name}! You completed the game in{' '}
         <span className="font-bold">

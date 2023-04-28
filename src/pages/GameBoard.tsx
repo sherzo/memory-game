@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { Card } from '../components/Card'
 import { Hud } from '../components/Hud'
-import { TCard } from '../@types'
+import { TCard } from '../@types/types'
 import { useMemoryCards } from '../hooks/useMemoryCards'
 import {
   TOTAL_NUMBER_OF_CARDS,

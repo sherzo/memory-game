@@ -1,14 +1,15 @@
 import React from 'react'
-import { useGame, ONE_SECOND_IN_MS } from '../context/game-context'
 import { Timer } from './Timer'
+import { ONE_SECOND_IN_MS } from '../utils/constans'
+import { useTimer } from '../context/timer-context'
 
 export const StopWatch = () => {
-  const { state, dispatch } = useGame()
+  const { state, dispatch } = useTimer()
   const { time } = state
 
   React.useEffect(() => {
     const interval = setInterval(() => {
-      dispatch({ type: 'incrementTime' })
+      dispatch({ type: 'increment' })
     }, ONE_SECOND_IN_MS)
 
     return () => {

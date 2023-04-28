@@ -34,3 +34,9 @@ export type TCard = {
   uuid: string
   title: string
 }
+
+export type PartialRecord<K extends keyof any, T> = {
+  [P in K]?: T
+}
+
+export type CardSelected = Pick<TCard, 'uuid' | 'id'>

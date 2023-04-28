@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { ModyApiResponse, ModyoImage } from '../@types'
+import { ModyApiResponse, ModyoImage } from '../@types/types'
 import { request } from '../utils/request'
 
 const getAdaptedData = ({ entries }: ModyApiResponse): ModyoImage[] => {

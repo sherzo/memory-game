@@ -1,6 +1,4 @@
-import { TCard } from '../@types'
-
-type CardSelected = Pick<TCard, 'uuid' | 'id'>
+import { CardSelected, TCard } from '../@types/types'
 
 type CardProps = TCard & {
   onClick: (turn: CardSelected) => void
