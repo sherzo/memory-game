@@ -1,10 +1,16 @@
 import { useState } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 export const Welcome = (): JSX.Element => {
   const [name, setName] = useState<string>('')
+  const navigate = useNavigate()
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value)
+  }
+
+  const handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault()
+    navigate('/game')
   }
 
   return (
@@ -13,7 +19,7 @@ export const Welcome = (): JSX.Element => {
       <p className="text-lg text-gray-500">
         Test your concentration in a fun way
       </p>
-      <form action="#" className="mt-4 min-w-full">
+      <form action="#" className="mt-4 min-w-full" onSubmit={handleSubmit}>
         <input
           name="full_name"
           onChange={handleOnChange}

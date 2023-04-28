@@ -1,4 +1,4 @@
-export const GameFinished = (): JSX.Element => {
+export const GameOver = (): JSX.Element => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen lg:w-1/2 mx-auto">
       <h1 className="text-5xl mb-2 text-gray-800">You Win</h1>
