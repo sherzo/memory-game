@@ -1,3 +1,5 @@
+import { StopWatch } from './StopWatch'
+
 export const Hud = ({
   score,
   misses
@@ -14,14 +16,7 @@ export const Hud = ({
       <span className="font-bold text-2xl ">
         ✅ Hits: <span className="font-black">{score}</span>
       </span>
-      <div
-        className="bg-blue-900 h-16 w-24 rounded-md sm:w-40
-          shadow-lg absolute left-1/2 transform -translate-x-1/2 
-          -translate-y-1/2 mt-4 flex justify-center items-center 
-        "
-      >
-        <span className="text-2xl text-white font-bold">⏱️ 01:45</span>
-      </div>
+      <StopWatch />
       <span className="font-bold text-2xl ">
         💥 Misses: <span className="font-black">{misses}</span>
       </span>
