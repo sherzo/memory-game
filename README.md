@@ -3,12 +3,8 @@
 ## See demo: [here](https://memory-game-sherzo.vercel.app/) 🚀
 
 ![alt](./docs/img/Capture-2023-04-28-162918.png)
-*Desktop*
 
-![alt](./docs/img/memory-game-sherzo.vercel.app_iPhoneSE.png)
-*Mobile*
-
-## Environment Setup
+## 🛠️ Environment Setup
 
 ### Needed tools
 
