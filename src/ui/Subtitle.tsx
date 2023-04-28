@@ -3,5 +3,5 @@ type SubtitleProps = {
 }
 
 export const Subtitle = ({ children }: SubtitleProps) => {
-  return <p className="text-lg text-gray-500">{children}</p>
+  return <p className="text-lg text-gray-500 text-center">{children}</p>
 }
