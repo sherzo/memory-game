@@ -1,4 +1,10 @@
-export const Hud = (): JSX.Element => {
+export const Hud = ({
+  score,
+  misses
+}: {
+  score: number
+  misses: number
+}): JSX.Element => {
   return (
     <div
       className="flex bg-white mx-auto justify-between 
@@ -6,7 +12,7 @@ export const Hud = (): JSX.Element => {
       lg:w-10/12 mb-10"
     >
       <span className="font-bold text-2xl ">
-        Hits: <span className="font-black">1</span>
+        ✅ Hits: <span className="font-black">{score}</span>
       </span>
       <div
         className="bg-blue-900 h-16 w-24 rounded-md sm:w-40
@@ -14,10 +20,10 @@ export const Hud = (): JSX.Element => {
           -translate-y-1/2 mt-4 flex justify-center items-center 
         "
       >
-        <span className="text-2xl text-white font-bold">01:45</span>
+        <span className="text-2xl text-white font-bold">⏱️ 01:45</span>
       </div>
       <span className="font-bold text-2xl ">
-        Misses: <span className="font-black">20</span>
+        💥 Misses: <span className="font-black">{misses}</span>
       </span>
     </div>
   )
