@@ -25,8 +25,8 @@
 
 ### 💪 Run in production
 
-1. Build the project `yarn build` or `npm run build`
-2. See a preview: `yarn peview` or `npm run preview`
+1. Install the Vercel CLI and run vercel to deploy.
+2. Vercel will detect that you are using Vite and will enable the correct settings for your deployment.
 
 ## 👩‍💻 Project explanation
 
