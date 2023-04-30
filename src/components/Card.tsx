@@ -9,6 +9,7 @@ export const Card = ({
   id,
   uuid,
   url,
+  title,
   isFlipped,
   onClick
 }: CardProps): JSX.Element => {
@@ -30,7 +31,11 @@ export const Card = ({
         <span className="text-3xl font-bold">❔</span>
       </div>
       <div className="card__face card__face--back">
-        <img src={url} className="object-cover aspect-video h-full" />
+        <img
+          src={url}
+          className="object-cover aspect-video h-full"
+          alt={title}
+        />
       </div>
     </div>
   )
