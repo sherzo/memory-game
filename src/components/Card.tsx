@@ -23,9 +23,10 @@ export const Card = ({
 
   return (
     <div
-      data-id={id}
+      data-testid={id}
       className={`card ${isFlipped ? 'card--is-flipped' : ''} `}
       onClick={handleClick}
+      title={title}
     >
       <div className="card__face card__face--front">
         <span className="text-3xl font-bold">❔</span>

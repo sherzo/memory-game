@@ -11,7 +11,7 @@ export const Game = () => {
   const { cards } = useMemoryCards({ total: TOTAL_NUMBER_OF_CARDS })
   const navigate = useNavigate()
   const {
-    state: { score, misses },
+    state: { score },
     dispatch
   } = useGame()
 
@@ -28,7 +28,7 @@ export const Game = () => {
 
   return (
     <div>
-      <Hud score={score} misses={misses} />
+      <Hud />
       <GameBoard cards={cards} />
     </div>
   )

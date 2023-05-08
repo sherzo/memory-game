@@ -1,12 +1,10 @@
+import { useGame } from '../context/game'
 import { StopWatch } from './StopWatch'
 
-export const Hud = ({
-  score,
-  misses
-}: {
-  score: number
-  misses: number
-}): JSX.Element => {
+export const Hud = (): JSX.Element => {
+  const {
+    state: { score, misses }
+  } = useGame()
   return (
     <div
       className="flex bg-white mx-auto justify-between 
@@ -14,11 +12,17 @@ export const Hud = ({
       lg:w-10/12 mb-10"
     >
       <span className="font-bold text-xl lg:text-2xl">
-        ✅ Hits: <span className="font-black">{score}</span>
+        ✅ Hits:{' '}
+        <span className="font-black" title="score">
+          {score}
+        </span>
       </span>
       <StopWatch />
       <span className="font-bold text-xl lg:text-2xl">
-        💥 Misses: <span className="font-black">{misses}</span>
+        💥 Misses:{' '}
+        <span className="font-black" title="misses">
+          {misses}
+        </span>
       </span>
     </div>
   )
