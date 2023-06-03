@@ -18,10 +18,10 @@
 2. Run dev: `yarn dev` or `npm run dev`
 3. Open in your browser: `http://localhost:5173/`
 
-<!-- ### ✅ Tests execution
+### ✅ Tests execution
 
 1. Install the dependencies if you haven't done it previously: `yarn install` or `npm install`
-2. Run with: `yarn test` or `npm run test` -->
+2. Run with: `yarn test` or `npm run test`
 
 ### 💪 Run in production
 
