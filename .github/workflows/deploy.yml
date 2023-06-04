@@ -25,5 +25,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd app/memory-game/etc
+            cd app/memory-game
+            cd etc
             sh deploy.sh
